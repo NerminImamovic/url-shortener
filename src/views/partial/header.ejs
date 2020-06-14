@@ -1,0 +1,37 @@
+<!-- views/partials/header.ejs -->
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navb" class="navbar-collapse collapse hide">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/shortUrls">All Urls</a>
+        </li>
+
+        <% if (locals.userId !== undefined ) { %>
+          <li class="nav-item active">
+            <a class="nav-link" href="/profile"">My Urls</a>
+          </li>
+        <% } %>
+      </ul>
+  
+      <ul class="nav navbar-nav ml-auto">
+        <% if (locals.userId !== undefined ) { %>
+          <li class="nav-item active">
+            <a class="nav-link" href="/logout"">Log out</a>
+          </li>
+
+        <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/register"><span class="fas fa-user"></span> Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><span class="fas fa-sign-in-alt"></span> Login</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>

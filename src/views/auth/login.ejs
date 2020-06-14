@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <%- include ('../partial/head') %>
+  </head>
+<body>
+
+  <header>
+    <%- include ('../partial/header') %>
+  </header>
+
+  <main>
+    <div class="container">
+      <form action="/login" method="POST" class="my-4">
+
+        <div class="form-group">
+          <label for="email" class="sr-only">Email</label>
+          <input required placeholder="Email" type="email" name="email" id="email" class="form-control col mr-2"><br />
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="sr-only">Password</label>
+          <input required placeholder="Password" type="password" name="password" id="password" class="form-control col mr-2"><br />
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-success" type="submit">Register</button>
+        </div>
+      </form>
+    
+    </div>
+  </main>
+
+  <footer>
+    <%- include ('../partial/footer') %>
+  </footer>
+
+
+</body>
+</html>
